@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="banner">
+    <div class="container">
+      <div class="banner-txt">
+        <h1>
+          金魚都能懂的
+          <small>
+            這個網頁畫面怎麼切
+          </small>
+        </h1>
+        <h2>
+          圖文滿版區塊
+          <p>
+            這畫面實在常見，在各種樣版網站可說是設計常客
+            <br>
+            不能切不出來R
+          </p>
+        </h2>
+      </div>
+    </div>
+  </div>
+</body>
+
+<style>
+  /* 在開發專案前，要先做 CSS Reset 使每一個瀏覽器都在同樣的設計起點上出發 */
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background: 
+      linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100%,
+      url("https://picsum.photos/200/300") right center / auto 100%;
+  }
+
+  .container {
+    height: 100%;
+    margin: auto; 
+  }
+
+  .banner-txt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: end;
+    align-items: flex-start; /* 這裡應該是不太會的地方，設成 flex-start 就可以讓底線不佔滿整條行*/
+    padding: 0px 20px;
+  }
+
+  .banner-txt h1 {
+    border-bottom: 3px solid #000;
+  }
+
+  .banner-txt h1 small {
+    display: block;
+  }
+
+  .banner-txt p {
+    font-size: 16px;
+  }
+
+</style>
+</html>
