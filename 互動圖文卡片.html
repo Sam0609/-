@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=1" alt="隨機圖片">
+      <div class="txt">
+        <h2>神秘的森林探險</h2>
+        <p>在這片神秘的森林中，每一步都充滿了驚喜和挑戰。高大的古樹遮蔽了陽光，營造出一種神秘而幽靜的氛圍。</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=1" alt="隨機圖片">
+      <div class="txt">
+        <h2>神秘的森林探險</h2>
+        <p>在這片神秘的森林中，每一步都充滿了驚喜和挑戰。高大的古樹遮蔽了陽光，營造出一種神秘而幽靜的氛圍。</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=1" alt="隨機圖片">
+      <div class="txt">
+        <h2>神秘的森林探險</h2>
+        <p>在這片神秘的森林中，每一步都充滿了驚喜和挑戰。高大的古樹遮蔽了陽光，營造出一種神秘而幽靜的氛圍。</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=1" alt="隨機圖片">
+      <div class="txt">
+        <h2>神秘的森林探險</h2>
+        <p>在這片神秘的森林中，每一步都充滿了驚喜和挑戰。高大的古樹遮蔽了陽光，營造出一種神秘而幽靜的氛圍。</p>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+}
+
+.item {
+  width: 25%;
+  position: relative;
+}
+
+.item img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.item .txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(107, 105, 105);
+  opacity: 0;
+  transition: .5s;
+}
+
+.item h2:after {
+  content: '';
+  display: block;
+  background-color: yellow;
+  height: 2px;
+  width: 0px;
+  transition: width .5s .5s;
+}
+
+.item:hover h2:after {
+  width: 100%;
+}
+
+.item:hover .txt {
+  opacity: 1;
+}
+
+.item:hover .txt h2 {
+  transition: .5s;
+}
+
+</style>
+</html>
