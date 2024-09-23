@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=1" alt="隨機圖片1">
+      <div class="txt">
+        <h2>人名1</h2>
+        <p>這是人物介紹1。</p>
+      </div>
+    </div>
+      
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=2" alt="隨機圖片2">
+      <div class="txt">
+        <h2>人名2</h2>
+        <p>這是人物介紹2。</p>
+      </div>
+    </div>
+      
+    <div class="item">
+      <img src="https://picsum.photos/300/200?random=3" alt="隨機圖片3">
+      <div class="txt">
+        <h2>人名3</h2>
+        <p>這是人物介紹3。</p>
+      </div>
+    </div>
+  </div>
+</body>
+<style type="text/css">
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    background-color: black;
+  }
+
+  .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .item {
+    margin: 10px;
+    width: 368px;
+    text-align: center;
+    background-color: #fff;
+    transform: translateY(0px);
+    transition: 0.5s;
+  }
+
+  .item:hover {
+    transform:translateY(-50px);
+  }
+
+  .item:hover .txt {
+    background-image: linear-gradient(0deg, #FB8076, #FEB85D);
+  }
+
+  .item:hover .txt:before {
+    border-left: 184px solid #FEB85D;
+    border-right: 184px solid #FEB85D;
+  }
+
+  .item img {
+    width: 100%;
+  }
+
+  .item h2 {
+    border-bottom: 3px solid rgb(217, 151, 19);
+    margin: 0px 10px;
+    padding-bottom: .3em;
+    margin-bottom: .4em;
+    transition: .25s;
+  }
+  
+  .item .txt {
+    position: relative;
+  }
+
+  .item .txt:before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 50px solid transparent;
+    border-left: 184px solid white;
+    border-right: 184px solid white;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+
+  .item:hover h2 {
+    color: white;
+  }
+
+  .item p {
+    line-height: 1.6;
+    transition: .25s;
+  }
+
+  .item:hover p {
+    color: white;
+  }
+</style>
+</html>
